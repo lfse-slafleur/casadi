@@ -1320,7 +1320,6 @@ DM OptiNode::value(const MX& expr, const std::vector<MX>& values, bool scaled) c
     x_num.push_back(store_latest_.at(OPTI_VAR).at(i));
     undecided_vars |= override_num(temp[OPTI_VAR], x_num, i);
     if (scaled) {
-      uout() << "Scaling: " << store_linear_scale_.at(OPTI_VAR)[meta(e).i] << " " << store_linear_scale_offset_.at(OPTI_VAR)[meta(e).i] << std::endl;
       x_num.back() = x_num.back()/store_linear_scale_.at(OPTI_VAR)[meta(e).i] - store_linear_scale_offset_.at(OPTI_VAR)[meta(e).i];
     }
   }

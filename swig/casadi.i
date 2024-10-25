@@ -4604,7 +4604,6 @@ make_property(casadi::Opti, casadi_solver);
             stacktrace.append({"file":os.path.abspath(frame.f_code.co_filename),"line":frame.f_lineno,"name":frame.f_code.co_name})
           except Exception as e:
             break
-        print()
         args = list(args)
         if len(args)==3 and isinstance(args[2],dict):
           args[2] = dict(args[2])
